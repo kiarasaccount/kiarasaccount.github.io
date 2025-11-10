@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <img src="assets/logo.png" alt="logo" class="logo" onerror="this.style.display='none'"/>
+      <h1>Hi, I'm Kiara</h1>
+      <p class="subtitle">Economics Graduate, who loves to code!</p>
+      <div class="buttons">
+        <a class="btn" href="about.html">click to learn about me</a>
+        <a class="btn ghost" href="https://github.com/kiarasaccount" target="_blank" rel="noopener">click to see my github</a>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <footer class="footer">
+    <div class="container">
+      <p>© Kiara — Built with HTML & CSS</p>
+    </div>
+  </footer>
+</body>
+</html>
