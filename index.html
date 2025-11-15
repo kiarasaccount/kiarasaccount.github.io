@@ -6,6 +6,31 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
+  <!-- KIARA ASSISTANT WIDGET -->
+<div id="kiara-chatbot-container">
+    <!-- Floating Chat Button -->
+    <div id="kiara-chat-button">
+        <img src="https://i.imgur.com/5cX1Z8m.png" alt="Kiara Avatar"/>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="kiara-chat-window">
+        <div id="kiara-chat-header">
+            <img src="https://i.imgur.com/5cX1Z8m.png" class="kiara-avatar"/>
+            <span>Kiara Assistant</span>
+        </div>
+
+        <div id="kiara-chat-body"></div>
+
+        <div id="kiara-chat-input-container">
+            <input id="kiara-chat-input" type="text" placeholder="Ask me anything..." />
+            <button id="kiara-send-btn">➤</button>
+        </div>
+    </div>
+</div>
+
+  
 <body>
   <header class="hero">
     <div class="container">
@@ -50,4 +75,5 @@ async function askBot() {
     document.getElementById("botResponse").innerText = data.answer;
 }
 </script>
+
 
