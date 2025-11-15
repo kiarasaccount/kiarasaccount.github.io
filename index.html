@@ -28,3 +28,26 @@
   </footer>
 </body>
 </html>
+
+<div style="max-width: 400px; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+    <h3>Chat with Kiara's Bot</h3>
+    <textarea id="userInput" rows="3" style="width: 100%;" placeholder="Ask me something..."></textarea>
+    <button onclick="askBot()" style="margin-top: 10px;">Send</button>
+    <p><strong>Bot:</strong> <span id="botResponse"></span></p>
+</div>
+
+<script>
+async function askBot() {
+    const question = document.getElementById("userInput").value;
+
+    const response = await fetch("https://your-chatbot-api.onrender.com/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question })
+    });
+
+    const data = await response.json();
+    document.getElementById("botResponse").innerText = data.answer;
+}
+</script>
+
