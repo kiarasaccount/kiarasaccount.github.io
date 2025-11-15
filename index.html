@@ -116,8 +116,7 @@ async function sendMessage() {
 async function askBot() {
     const question = document.getElementById("userInput").value;
 
-    const response = await fetch("https://kiara-chatbox-backend.onrender.com/ask
-", {
+    const response = await fetch("https://kiara-chatbox-backend.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question })
@@ -127,6 +126,7 @@ async function askBot() {
     document.getElementById("botResponse").innerText = data.answer;
 }
 </script>
+
 
 
 
