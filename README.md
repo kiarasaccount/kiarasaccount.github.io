@@ -1,31 +1,19 @@
+This repository contains the frontend code for my personal portfolio website, hosted using GitHub Pages.
+It includes a homepage, alongside a link to two additional pages and a fully-functioning chatbot.
+For more details on the chatbot, please see my backend repository!
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="hero">
-    <div class="container">
-      <img src="assets/logo.png" alt="logo" class="logo" onerror="this.style.display='none'"/>
-      <h1>Hi, I'm Kiara</h1>
-      <p class="subtitle">Economics Graduate, who loves to code!</p>
-      <div class="buttons">
-        <a class="btn" href="about.html">click to learn about me</a>
-        <a class="btn ghost" href="https://github.com/kiarasaccount" target="_blank" rel="noopener">click to see my github</a>
-      </div>
-    </div>
-  </header>
+Technologies used: HTML, CSS, JavaScript, GitHub Pages
+Inside index.html, the chatbot’s JavaScript sends the message to the backend using:
 
-  
+const response = await fetch("https://kiara-chatbot-backend.onrender.com/ask", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ question })
+});
 
-  <footer class="footer">
-    <div class="container">
-      <p>© Kiara — Built with HTML & CSS</p>
-    </div>
-  </footer>
-</body>
-</html>
+The widget uses a floating avatar image that I sourced from Canva.
+This image is stored locally in the assets folder for fast global loading.
+The site automatically deploys via GitHub Pages whenever you push changes to main.
+
+The chat widget will only work if your backend is online.
+The site is static, so all interactions happen through JavaScript.
